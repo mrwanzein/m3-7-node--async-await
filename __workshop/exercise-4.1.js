@@ -1,6 +1,9 @@
 const request = require('request-promise');
 
 // getDadJoke
+const getDadJoke = () => {
+    return request('https://icanhazdadjoke.com/', { headers: {"Accept": "text/plain" } });
+}
 
 // 4.1
-// getJoke().then((data) => console.log(data));
+getDadJoke().then((data) => console.log(data));
